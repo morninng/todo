@@ -1,0 +1,20 @@
+<p>
+  todos works!
+</p>
+
+
+todo with a immutable object
+
+<span *ngFor="let todo of TodoData; let i = index;">
+  <app-todo 
+    [todo]="todo" 
+    [index]="i" 
+    (onChecked)="onChecked($event)"
+    (onChecked2)="onChecked2($event)"></app-todo>
+</span>
+<br><br>
+
+
+
+<button (click)="addTodo()">add todo</button>
+<button (click)="addTodo2()">add todo2</button>

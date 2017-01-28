@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
+import { TopComponent } from './top/top.component';
+
 const routes: Routes = [
   {
     path: '',
-    children: []
+    children: [
+      {path:"array-todo", loadChildren: 'app/array-todo/array-todo.module#ArrayTodoModule'},
+      {path:"",component:TopComponent}
+    ]
   }
 ];
 
