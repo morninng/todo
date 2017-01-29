@@ -11,7 +11,7 @@ export class TodosComponent implements OnInit {
 
   constructor() { }
 
-  TodoData :Array<TODO>= [
+  TodoData :TODO[]= [
     {content: "aaa", status:false},
     {content: "bbb", status:false},
     {content: "ccc", status:false},

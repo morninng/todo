@@ -1,0 +1,23 @@
+<p>
+  todos works!j
+</p>
+
+
+
+<br><br>
+
+<span *ngFor="let todo of TodoData | keysInObject">
+
+  <app-todo 
+    [todo]="todo.value" 
+    [key]="todo.key" 
+    (onChecked)="onChecked($event)"
+    (onChecked2)="onChecked2($event)"></app-todo>
+
+</span>
+
+<br><br>
+
+
+<button (click)="add_todo()">add_todo</button>
+<button (click)="add_todo2()">add_todo2</button>

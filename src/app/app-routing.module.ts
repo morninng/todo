@@ -9,6 +9,7 @@ const routes: Routes = [
     path: '',
     children: [
       {path:"array-todo", loadChildren: 'app/array-todo/array-todo.module#ArrayTodoModule'},
+      {path:"object-todo", loadChildren: 'app/object-todo/object-todo.module#ObjectTodoModule'},
       {path:"",component:TopComponent}
     ]
   }
