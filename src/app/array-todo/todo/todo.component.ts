@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import {TODO} from './../../interface/todo';
 
 
@@ -9,7 +9,7 @@ import {TODO} from './../../interface/todo';
   styleUrls: ['./todo.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TodoComponent implements OnInit, OnChanges {
+export class TodoComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input() index;
   @Input() todo :TODO;
@@ -32,6 +32,10 @@ export class TodoComponent implements OnInit, OnChanges {
 
   done2(){
     this.onChecked2.emit( {index:this.index,status:!this.todo.status});
+  }
+
+  ngOnDestroy(){
+    console.log("TodoComponent ngonDestroy -  index:" + this.index + " - status : " + this.todo.status)
   }
 
 }
