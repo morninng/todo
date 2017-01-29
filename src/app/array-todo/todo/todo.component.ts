@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit, OnChanges, OnDestroy {
   @Input() todo :TODO;
   @Output() onChecked = new EventEmitter<any>();
   @Output() onChecked2 = new EventEmitter<any>();
+  @Output() onUpdateContent = new EventEmitter<any>();
 
   constructor() { }
 
@@ -32,6 +33,10 @@ export class TodoComponent implements OnInit, OnChanges, OnDestroy {
 
   done2(){
     this.onChecked2.emit( {index:this.index,status:!this.todo.status});
+  }
+
+  update_content(){
+    this.onUpdateContent.emit({index:this.index, content:"sss"});
   }
 
   ngOnDestroy(){

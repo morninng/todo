@@ -29,6 +29,9 @@ export class TodosComponent implements OnInit {
   onChecked2(data){
     this.TodoData[data.index].status = data.status;
   }
+  onUpdateContent(data){
+    this.TodoData[data.index].content = data.content;
+  }
 
 
   addTodo(){
