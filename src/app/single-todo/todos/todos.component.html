@@ -1,0 +1,11 @@
+
+  <app-todo 
+    [todo]="todo" 
+    (onChecked)="onChecked($event)"
+    (onChecked2)="onChecked2($event)"
+    (onUpdateContent)="onUpdateContent($event)"></app-todo>
+
+
+
+<input type="text" #box >
+<button (click)="input_text(box.value)">textbox data</button>

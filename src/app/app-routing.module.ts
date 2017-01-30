@@ -10,6 +10,7 @@ const routes: Routes = [
     children: [
       {path:"array-todo", loadChildren: 'app/array-todo/array-todo.module#ArrayTodoModule'},
       {path:"object-todo", loadChildren: 'app/object-todo/object-todo.module#ObjectTodoModule'},
+      {path:"single-todo", loadChildren: 'app/single-todo/single-todo.module#SingleTodoModule'},
       {path:"",component:TopComponent}
     ]
   }

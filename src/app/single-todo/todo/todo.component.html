@@ -1,0 +1,11 @@
+
+<hr>
+<span [ngClass]="{'fontdone':todo.status}"> 
+    <app-content 
+        [content]="todo.content"></app-content>
+</span>
+<button (click)="done()">done</button> 
+<button (click)="done2()">done2</button>
+<button (click)="update_content()">update_content</button>
+
+
